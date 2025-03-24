@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-gtwalsheim: "GT Walsheim Pro", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --font-gtwalsheim: "GT Walsheim Pro", sans-serif;
   }
 }
 
@@ -78,5 +80,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-gtwalsheim);
+    font-weight: 400; /* Default Regular */
+    font-size: 16px;
+    line-height: 1.5; 
+    color: #ADADAD;
   }
 }
