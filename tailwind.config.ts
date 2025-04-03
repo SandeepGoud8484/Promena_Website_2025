@@ -13,6 +13,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          "custom-radial": "radial-gradient(50% 100% at 50% 0%, #0D1D46 0%, #050916 100%)",
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -82,6 +83,13 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      screens: {
+        sm: "640px",  // Small devices (phones)
+        md: "768px",  // Medium devices (tablets)
+        lg: "1024px", // Large devices (laptops)
+        xl: "1280px", // Extra large devices (desktops)
+        "2xl": "1536px", // 2X large screens (big desktops)
       },
     },
   },
