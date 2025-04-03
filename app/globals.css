@@ -254,8 +254,16 @@ li.contentList {
   background-position: center;
 }
 
+.moreCaseStudies{
+  background-image: url("/assets/moreCaseStudies.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .eachIndustry {
   /* background: var(--your-background-color, transparent); */
+  background-color: #101118;
   border: 1px solid transparent;
   box-shadow: 0px 0px 4px 0px #ffffff40;
   transition: all 0.3s ease;

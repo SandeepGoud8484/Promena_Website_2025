@@ -700,7 +700,7 @@ export const servicesContent = [
       {
         subTitle: "Microservices Architecture",
         description: "Scalable, modular service architecture",
-        subIcon: "/assets/dd-soft8.svg", 
+        subIcon: "/assets/dd-soft1.svg", 
         link: "/softwareAppDevelopment/micro-services-architecture",
       },
     ],
