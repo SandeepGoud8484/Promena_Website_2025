@@ -1,10 +1,35 @@
+import BannerHome from '@/components/BannerHome';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import HomeSectionOne from '@/components/HomeSectionOne';
+import HomeSectionThree from '@/components/HomeSectionThree';
+import HomeSectionTwo from '@/components/HomeSectionTwo';
+// import OfficeLocations from '@/components/OfficeLocations';
+// import ScrollPartners from '@/components/ScrollPartners';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
+const OfficeLocations = dynamic(() => import("@/components/OfficeLocations"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const ScrollPartners = dynamic(() => import("@/components/ScrollPartners"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <nav className="bg-white shadow-sm">
+    <main className="">
+      <Header />
+      <BannerHome />
+      <ScrollPartners />
+      <HomeSectionOne />
+      <HomeSectionTwo />
+      <HomeSectionThree />
+      <OfficeLocations />
+      <Footer />
+      {/* <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold">My Website</div>
@@ -17,9 +42,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
@@ -40,7 +65,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

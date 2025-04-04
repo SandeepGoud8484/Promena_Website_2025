@@ -1,0 +1,43 @@
+.bannerService {
+  background: radial-gradient(
+      circle at center top,
+      rgba(0, 0, 0, 0) 0%,
+      #000 100%
+    ),
+    url("/assets/bg-service.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 80px;
+}
+
+.sectionHeading {
+  font-size: 60px;
+}
+
+.serviceItem {
+  border: 0.5px solid; /* Define the border width */
+  border-radius: 50px;
+}
+.serviceItem:hover {
+    background: linear-gradient(193.85deg, #FFFFFF 9.57%, rgba(241, 241, 241, 0.8) 89.79%);
+  }
+.serviceItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 0.5px; /* Border thickness */
+  background: linear-gradient(
+    100.98deg,
+    rgba(255, 255, 255, 0.5) 11.6%,
+    rgba(153, 153, 153, 0.5) 89.29%
+  );
+  mask-composite: exclude;
+  -webkit-mask-composite: exclude;
+  z-index: -1;
+}
