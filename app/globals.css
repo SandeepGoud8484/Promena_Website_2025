@@ -156,6 +156,7 @@ p {
   line-height: 1.625; /* Keeps proportional spacing */
   font-weight: 500;
   color: #adadad;
+  /* letter-spacing: 0.5px; */
 }
 
 section {

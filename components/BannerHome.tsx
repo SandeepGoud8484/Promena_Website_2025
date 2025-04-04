@@ -179,6 +179,7 @@ const BannerHome = () => {
                                 alt="Banner Image"
                                 fill
                                 objectFit="contain"
+                                priority
                             />
                         </motion.div>
                     </AnimatePresence>

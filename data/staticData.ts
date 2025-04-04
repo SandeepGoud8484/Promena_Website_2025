@@ -1340,3 +1340,83 @@ export const products = [
   },
 ];
 
+
+// ......................................SERVICES PAGE.....................................................
+export const allservices = [
+  "All Services",
+  "AI & Generative AI Solutions",
+  "Machine Learning Services",
+  "Custom Software & Application Development",
+  "Cloud Computing Services",
+  "Blockchain Solutions",
+  "DevOps Consulting & Services",
+  "Mobile Application Development",
+  "IoT Solutions",
+  "UI/UX Design",
+];
+
+export const serviceCardData = [
+  {
+    title: "AI & Generative AI Solutions",
+    subtitle: "Revolutionize your business with Artificial Intelligence.",
+    description:
+      "Our AI and Generative AI services include custom AI model development, domain-specific training, and seamless integration. Experience intelligent automation, personalized solutions, and enhanced operational efficiency. Stay ahead in the age of AI innovation.",
+    image: "/assets/service-ai.png",
+  },
+  {
+    title: "Machine Learning Services",
+    subtitle: "Unleash the power of data with Machine Learning.",
+    description:
+      "We deliver cutting-edge solutions, including predictive analytics, deep learning models, and real-time insights. Empower your business with smarter decision-making and actionable intelligence.",
+    image: "/assets/service-ml.png",
+  },
+  {
+    title: "Custom Software & Application Development",
+    subtitle: "Innovate with custom software and apps.",
+    description:
+      "From robust web applications to intuitive mobile solutions, we specialize in creating scalable, future-ready software. Empower your business with seamless API integrations and tailored solutions that drive growth.",
+    image: "/assets/service-app.png",
+  },
+  {
+    title: "Cloud Computing Services",
+    subtitle: "Transform your business with the cloud.",
+    description:
+      "Our end-to-end cloud solutions provide secure, scalable, and high-performance infrastructures. Leverage the power of cloud computing to innovate faster and optimize operational efficiency.",
+    image: "/assets/service-cloud.png",
+  },
+  {
+    title: "Blockchain Solutions",
+    subtitle: "Secure, transparent, and efficient.",
+    description:
+      "Leverage blockchain technology for smart contracts, decentralized applications, and secure transactions. Enhance trust, streamline processes, and redefine your business for the digital economy.",
+    image: "/assets/service-blockchain.png",
+  },
+  {
+    title: "DevOps Consulting & Services",
+    subtitle: "Accelerate innovation with DevOps.",
+    description:
+      "We streamline your development and operations workflows, ensuring faster delivery, improved collaboration, and automated deployments. Stay competitive with continuous integration and delivery.",
+    image: "/assets/service-devops.png",
+  },
+  {
+    title: "Mobile Application Development",
+    subtitle: "Create engaging mobile experiences.",
+    description:
+      "Our team specializes in building secure, high-performance mobile apps for iOS and Android. Elevate user engagement with apps designed to captivate and perform flawlessly.",
+    image: "/assets/service-mobileapp.png",
+  },
+  {
+    title: "IoT Solutions",
+    subtitle: "Connecting devices for smarter solutions.",
+    description:
+      "Our IoT services enable businesses to harness real-time data from smart devices. Optimize operations, gain actionable insights, and embrace intelligent automation.",
+    image: "/assets/service-iot.png",
+  },
+  {
+    title: "UI/UX Design",
+    subtitle: "Crafting designs that captivate.",
+    description:
+      "Our UI/UX experts create user-friendly interfaces and visually stunning designs. Ensure your digital products leave a lasting impression and enhance customer satisfaction.",
+    image: "/assets/service-uiux.png",
+  },
+];

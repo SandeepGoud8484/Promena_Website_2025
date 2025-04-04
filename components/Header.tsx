@@ -34,13 +34,13 @@ const mobileNavItems = [
     {
         id: 4,
         title: "AI Solutions",
-        path: "/working",
+        path: "/services",
         content: aiSolutions,
     },
     {
         id: 5,
         title: "Augment Your Team",
-        path: "/augment",
+        path: "/services",
         content: augmentContent,
     },
 ];
@@ -129,7 +129,7 @@ export default function Header() {
             >
                 <div className="containerTypeOne flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold flex items-center">
-                        <Image src={logo} alt="Logo" width={166} height={29} />
+                        <Image src={logo} alt="Logo" width={166} height={29} priority/>
                     </Link>
 
                     <button
@@ -170,7 +170,7 @@ export default function Header() {
                             >
                                 {/* <span className="px-4 py-2 cursor-pointer">{item.title}</span> */}
                                 <Link
-                                    href="/contact"
+                                    href="/services"
                                     className={`block lg:inline-block py-2 lg:py-0  flex items-center xl:text-[16px] lg:text-[14px] 3xl:text-lg-4k 4xl:text-xl-4k 4k:text-2xl-4k font-medium leading-[24px] hover:text-white transition-colors duration-200 ${activeDropdown === item.title ? "text-white" : "text-[#ADADAD]"
                                         }`}
                                 >

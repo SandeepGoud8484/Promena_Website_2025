@@ -4,10 +4,19 @@ import Header from '@/components/Header';
 import HomeSectionOne from '@/components/HomeSectionOne';
 import HomeSectionThree from '@/components/HomeSectionThree';
 import HomeSectionTwo from '@/components/HomeSectionTwo';
-import OfficeLocations from '@/components/OfficeLocations';
-import ScrollPartners from '@/components/ScrollPartners';
+// import OfficeLocations from '@/components/OfficeLocations';
+// import ScrollPartners from '@/components/ScrollPartners';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
+const OfficeLocations = dynamic(() => import("@/components/OfficeLocations"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+const ScrollPartners = dynamic(() => import("@/components/ScrollPartners"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   return (

@@ -1,11 +1,20 @@
 'use client';
 import React from 'react'
 import { aboutUsDetails, products, servicesDetails } from '@/data/staticData';
-import Counter from './ui/counter';
+// import Counter from './ui/counter';
 import Image from 'next/image';
 import SectionLabel from './reusable/SectionLabel';
 import { ChevronRight } from "lucide-react";
-import { HeroParallax } from './TopProjects';
+// import { HeroParallax } from './TopProjects';
+import dynamic from 'next/dynamic';
+
+const Counter = dynamic(() => import("./ui/counter"), {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  });
+  const HeroParallax = dynamic(() =>
+    import("./TopProjects").then((mod) => mod.HeroParallax)
+  );
 
 
 
