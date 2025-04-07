@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import logo from "../public/assets/loc-promenaLogoWhite.png";
-// import NavDropdown from "./NavDropdown";
 // import ContactUs from "@/components/ContactUs/ContactUs";
 
 import { servicesContent, aiSolutions, augmentContent } from "@/data/staticData";
@@ -23,7 +22,7 @@ const mobileNavItems = [
     {
         id: 2,
         title: "About Us",
-        path: "/about",
+        path: "/industries",
     },
     {
         id: 3,
@@ -40,7 +39,7 @@ const mobileNavItems = [
     {
         id: 5,
         title: "Augment Your Team",
-        path: "/services",
+        path: "/augment-your-team",
         content: augmentContent,
     },
 ];
@@ -170,7 +169,7 @@ export default function Header() {
                             >
                                 {/* <span className="px-4 py-2 cursor-pointer">{item.title}</span> */}
                                 <Link
-                                    href="/services"
+                                    href={item.path}
                                     className={`block lg:inline-block py-2 lg:py-0  flex items-center xl:text-[16px] lg:text-[14px] 3xl:text-lg-4k 4xl:text-xl-4k 4k:text-2xl-4k font-medium leading-[24px] hover:text-white transition-colors duration-200 ${activeDropdown === item.title ? "text-white" : "text-[#ADADAD]"
                                         }`}
                                 >
@@ -366,7 +365,7 @@ export default function Header() {
                                     className="mb-3  p-2 rounded-md transition-all  border-b border-[#94979E]"
                                 >
                                     <div className="flex justify-between items-center">
-                                        <Link href={item.path || "item.path"}>
+                                        <Link href={item.path}>
                                             <p className="navTitle cursor-pointer text-[white]">{item.title}</p>
                                         </Link>
                                         {item.content && (

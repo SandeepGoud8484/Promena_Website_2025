@@ -29,6 +29,14 @@ export interface LocationsType{
     quote: string;
     name: string;
     designation: string;
-    stars: string; // Allow both string and StaticImageData
-    image: string; // Allow both string and StaticImageData
+    stars: string; 
+    image: string; 
+  }
+
+  export interface IndustryCardOneData {
+    number: string;
+    image: string;
+    title: string;
+    description: string;
+    icon: string;
   }

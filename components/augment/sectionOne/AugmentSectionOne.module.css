@@ -1,0 +1,17 @@
+.contentTypeOne {
+  background: linear-gradient(
+    168.27deg,
+    rgba(255, 255, 255, 0.2) 5.8%,
+    rgba(153, 153, 153, 0) 98.91%
+  );
+  border: 1px solid #a0a0a0;
+}
+.contentTypeTwo {
+  background: #00000008;
+  border: 1px solid #e1e0e0;
+}
+.headingThree {
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: clamp(26px, 2.8vw, 27.6px);
+}

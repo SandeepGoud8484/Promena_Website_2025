@@ -1,0 +1,19 @@
+.bannerService {
+  background: radial-gradient(50% 100% at 50% 0%, #3e5baa 0%, #050916 100%),
+    url("/assets/industriesBg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 80px;
+}
+
+.sectionHeading {
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 60px);
+  line-height: clamp(40px, 7vw, 70px);
+  text-align: center;
+}

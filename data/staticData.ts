@@ -1420,3 +1420,238 @@ export const serviceCardData = [
     image: "/assets/service-uiux.png",
   },
 ];
+
+
+// ......................................INDUSTRIES PAGE...................................................
+export const industryCardOneData = [
+  {
+    number: "01",
+    image: "/assets/industryOne-1.png",
+    title: "Healthcare and Medical Technology",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    icon: "/assets/industryOne-icon1.svg",
+  },
+  {
+    number: "02",
+    image: "/assets/industryOne-2.png",
+    title: "E-commerce and Retail",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    icon: "/assets/industryOne-icon2.svg",
+  },
+  {
+    number: "03",
+    image: "/assets/industryOne-3.png",
+    title: "Education and e-Learning",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    icon: "/assets/industryOne-icon1.svg",
+  },
+  {
+    number: "04",
+    image: "/assets/industryOne-4.png",
+    title: "Real Estate and Property Management",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    icon: "/assets/industryOne-icon2.svg",
+  },
+  {
+    number: "05",
+    image: "/assets/industryOne-5.png",
+    title: "Real Estate and Property Management",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    icon: "/assets/industryOne-icon1.svg",
+  },
+  {
+    number: "06",
+    image: "/assets/industryOne-6.png",
+    title: "Real Estate and Property Management",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    icon: "/assets/industryOne-icon2.svg",
+  },
+];
+
+export const industryCardTwoData = [
+  {
+    id: 7,
+    title: "Internet of Things",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-7.png",
+    icon: "/assets/industryOne-iot.png",
+  },
+  {
+    id: 8,
+    title: "Blockchain and NFT",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-8.png",
+    icon: "/assets/industryOne-blockchain.png",
+  },
+  {
+    id: 9,
+    title: "Pet Care and Services",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-9.png",
+    icon: "/assets/industryOne-pet.png",
+  },
+  {
+    id: 10,
+    title: "Business and Finance",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-10.png",
+    icon: "/assets/industryOne-business.png",
+  },
+  {
+    id: 11,
+    title: "Gaming and Sports",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-11.png",
+    icon: "/assets/industryOne-gaming.png",
+  },
+  {
+    id: 12,
+    title: "Travel and Booking",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-12.png",
+    icon: "/assets/industryOne-travel.png",
+  },
+  {
+    id: 13,
+    title: "Food and Restaurant",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-13.png",
+    icon: "/assets/industryOne-food.png",
+  },
+  {
+    id: 14,
+    title: "Aviation and Management",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-14.png",
+    icon: "/assets/industryOne-aviation.png",
+  },
+  {
+    id: 15,
+    title: "Government and Services",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+    image: "/assets/industryOne-15.png",
+    icon: "/assets/industryOne-government.png",
+  },
+];
+
+export const augmentTeamsData = [
+  {
+      id: 1,
+      bgColor: "#09090F",
+      labelName: "Backend",
+      mainHeading: "It is a long established fact that a reader will be distracted by the readable content",
+      mainImage: "/assets/aug-backend.webp",
+      content: [
+          {
+              subHeading: "User Research and Analysis",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "User Research and Analysis",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "User Research and Analysis",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "User Research and Analysis",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "User Research and Analysis",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+      ]
+  },
+  {
+      id: 2,
+      bgColor: "#F7F7FA",
+      labelName: "Frontend",
+      mainHeading: "It is a long established fact that a reader will be distracted by the readable content",
+      mainImage: "/assets/aug-backend.webp",
+      content: [
+          {
+              subHeading: "Angular",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "React.js",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "Next.js",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "JavaScript",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "HTML/CSS",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+      ]
+  },
+  {
+      id: 3,
+      bgColor: "#09090F",
+      labelName: "Mobile",
+      mainHeading: "It is a long established fact that a reader will be distracted by the readable content",
+      mainImage: "/assets/aug-backend.webp",
+      content: [
+          {
+              subHeading: "Android",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "Flutter",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "Kotlin",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "iOS",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+      ]
+  },
+  {
+      id: 4,
+      bgColor: "#F7F7FA",
+      labelName: "Digital Marketing",
+      mainHeading: "It is a long established fact that a reader will be distracted by the readable content",
+      mainImage: "/assets/aug-backend.webp",
+      content: [
+          {
+              subHeading: "SEO",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "Social Media Marketing",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+          {
+              subHeading: "Content Writing",
+              description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          },
+      ]
+  },
+]

@@ -1,0 +1,36 @@
+.industryCardTwo {
+  background: url("/assets/industryOne-bg1.webp");
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 24px); 
+  line-height: clamp(22px, 2.3vw, 27.6px); 
+}
+
+.cardDescription {
+  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: clamp(20px, 2vw, 27.6px);
+}
+
+.talkWithExperts{
+    background: linear-gradient(
+    180deg,
+    rgba(40, 183, 254, 0.8) 0%,
+    rgba(35, 167, 233, 0.8) 57.77%,
+    rgba(21, 109, 192, 0.8) 89.19%,
+    rgba(12, 70, 166, 0.9) 104.47%
+  ),
+  url('/assets/talkWithexpertsBg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.tweHeading {
+    font-weight: 600;
+    font-size: clamp(24px, 5vw, 40px);
+    line-height: clamp(32px, 6vw, 50px);
+    letter-spacing: 0;
+    text-align: center;
+  }

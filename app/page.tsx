@@ -1,22 +1,19 @@
-import BannerHome from '@/components/BannerHome';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import HomeSectionOne from '@/components/HomeSectionOne';
-import HomeSectionThree from '@/components/HomeSectionThree';
-import HomeSectionTwo from '@/components/HomeSectionTwo';
-// import OfficeLocations from '@/components/OfficeLocations';
-// import ScrollPartners from '@/components/ScrollPartners';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
-import Link from 'next/link';
-const OfficeLocations = dynamic(() => import("@/components/OfficeLocations"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
+import Header from '@/components/Header';
+import BannerHome from '@/components/BannerHome';
 const ScrollPartners = dynamic(() => import("@/components/ScrollPartners"), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
+import HomeSectionOne from '@/components/HomeSectionOne';
+import HomeSectionTwo from '@/components/HomeSectionTwo';
+import HomeSectionThree from '@/components/HomeSectionThree';
+const OfficeLocations = dynamic(() => import("@/components/OfficeLocations"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+import Footer from '@/components/Footer';
+
 
 export default function Home() {
   return (

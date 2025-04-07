@@ -85,6 +85,7 @@ const config: Config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       screens: {
+        xs: "426px",
         sm: "640px",  // Small devices (phones)
         md: "768px",  // Medium devices (tablets)
         lg: "1024px", // Large devices (laptops)
