@@ -22,7 +22,7 @@ const mobileNavItems = [
     {
         id: 2,
         title: "About Us",
-        path: "/industries",
+        path: "/about",
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const mobileNavItems = [
     {
         id: 4,
         title: "AI Solutions",
-        path: "/services",
+        path: "/industries",
         content: aiSolutions,
     },
     {

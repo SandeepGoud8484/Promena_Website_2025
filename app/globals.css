@@ -229,7 +229,7 @@ h2.featuresTitle {
 }
 
 .sectionHeading {
-  font-size: clamp(24px, 3vw, 36px);
+  font-size: clamp(24px, 3vw, 40px);
   font-weight: 700;
   line-height: clamp(32px, 1.5em, 50px);
 }
