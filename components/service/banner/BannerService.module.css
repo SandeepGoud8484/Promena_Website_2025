@@ -16,7 +16,10 @@
 }
 
 .sectionHeading {
-  font-size: 60px;
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 60px);
+  line-height: clamp(40px, 7vw, 70px);
+  text-align: center;
 }
 
 .serviceItem {

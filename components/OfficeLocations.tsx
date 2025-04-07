@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import whiteLogo from "../public/assets/loc-promenaLogoWhite.png";
 import Image from "next/image";
 import { locationDetails } from "@/data/staticData";
 
@@ -18,7 +17,7 @@ export default function OfficeLocations() {
             <div className="containerTypeOne  flex flex-col gap-[50px] items-center w-full py-[50px]">
                 <div className="logoInLocation flex flex-col items-center cursor-pointer">
                     <Image
-                        src={whiteLogo}
+                        src="/assets/loc-promenaLogoWhite.png"
                         width={166}
                         height={29}
                         alt="Company Logo"
