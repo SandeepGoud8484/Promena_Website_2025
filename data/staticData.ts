@@ -254,7 +254,7 @@ export const locationDetails: LocationsType[] = [
 export const teamImages = [
   {
     id: 1,
-    src: "/assets/team-amit.png",
+    src: "/assets/team-amit.webp",
     alt: "Amith",
     name: "Amith",
     role: "AI Engineer",
@@ -262,7 +262,7 @@ export const teamImages = [
   },
   {
     id: 2,
-    src: "/assets/team-santosh.png",
+    src: "/assets/team-santosh.webp",
     alt: "Santhosh",
     name: "Santhosh",
     role: "Javascript Developer",
@@ -270,7 +270,7 @@ export const teamImages = [
   },
   {
     id: 3,
-    src: "/assets/team-darshan.png",
+    src: "/assets/team-darshan.webp",
     alt: "Darshan",
     name: "Darshan",
     role: "Angular Developer",
@@ -278,7 +278,7 @@ export const teamImages = [
   },
   {
     id: 4,
-    src: "/assets/team-raju.png",
+    src: "/assets/team-raju.webp",
     alt: "Raju",
     name: "Raju",
     role: "Python Developer",
@@ -286,7 +286,7 @@ export const teamImages = [
   },
   {
     id: 5,
-    src: "/assets/team-amit.png",
+    src: "/assets/team-amit.webp",
     alt: "Amith",
     name: "Amith",
     role: "AI Engineer",
@@ -294,7 +294,7 @@ export const teamImages = [
   },
   {
     id: 6,
-    src: "/assets/team-santosh.png",
+    src: "/assets/team-santosh.webp",
     alt: "Santhosh",
     name: "Santhosh",
     role: "Javascript Developer",
@@ -302,7 +302,7 @@ export const teamImages = [
   },
   {
     id: 7,
-    src: "/assets/team-darshan.png",
+    src: "/assets/team-darshan.webp",
     alt: "Darshan",
     name: "Darshan",
     role: "Angular Developer",
@@ -310,7 +310,7 @@ export const teamImages = [
   },
   {
     id: 8,
-    src: "/assets/team-raju.png",
+    src: "/assets/team-raju.webp",
     alt: "Raju",
     name: "Raju",
     role: "Python Developer",
@@ -1655,3 +1655,38 @@ export const augmentTeamsData = [
       ]
   },
 ]
+
+// ........................................ABOUT PAGE.....................................................
+export const metrics = [
+  { digit: "100+", label: "Projects completed" },
+  { digit: "12", label: "Industry awards" },
+  { digit: "98%", label: "Client Satisfaction" },
+  { digit: "125K", label: "ROI achieved for clients" },
+];
+
+export const employeeThoughts = [
+  {
+      quote:
+          "Promena gave me the chance to develop my skills from the ground up. It’s been a rewarding experience, and I’ve grown so much since I joined.",
+      author: "Amith",
+      designation: "Senior Developer at Promena",
+      emoji: "😊",
+      avatar: '/assets/team-amit.webp',
+  },
+  {
+      quote:
+          "Joining Promena was one of the best decisions I’ve made. I’ve learned so much here, and the work environment really encourages personal and professional growth.",
+      author: "Darshan",
+      designation: "Angular Developer at Promena",
+      emoji: "👍",
+      avatar: '/assets/team-darshan.webp',
+  },
+  {
+      quote:
+          "Starting my career at Promena was a game-changer. The team is incredibly supportive, and I’ve had the chance to work on exciting projects that really helped me grow.",
+      author: "Raju",
+      designation: "Python Developer at Promena",
+      emoji: "🎉",
+      avatar: '/assets/team-raju.webp',
+  },
+];

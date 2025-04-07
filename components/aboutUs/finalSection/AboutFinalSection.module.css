@@ -1,0 +1,60 @@
+
+.thoughtCard {
+  background: #FAFAFA;
+  color: #000000;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.designation {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.emoji {
+  font-size: 2rem;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  background: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.quote {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.communityBg{
+    background: url('/assets/community-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,17 @@
+.metricSubHeading {
+  font-size: 20px;
+  color: rgba(40, 51, 77, 1);
+}
+.metricDescription {
+  font-size: 21px;
+  line-height: 1.6;
+  color: rgba(133, 146, 177, 1);
+}
+.metricNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #556ce4, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text; /* ✅ Standard property */
+  color: transparent;
+}

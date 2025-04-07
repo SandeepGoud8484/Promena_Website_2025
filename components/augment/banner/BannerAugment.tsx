@@ -5,7 +5,7 @@ import ButtonEmoji from '@/components/reusable/ButtonEmoji'
 
 const BannerAugment = () => {
     return (
-        <section className={`${styles.bannerAugment} flex justify-center`}>
+        <section className={`${styles.bannerAugment}`}>
             <div className='containerTypeOne flex flex-col items-center gap-[50px]'>
                 <div className='flex flex-col items-center gap-[20px]'>
                     <h1 className={`${styles.sectionHeading} text-center`}>{RenderTitle("Enhance Your Team's Potential")}</h1>
