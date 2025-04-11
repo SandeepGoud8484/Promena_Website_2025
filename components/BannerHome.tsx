@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Counter from "./ui/counter";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
+import ButtonEmoji from "./reusable/ButtonEmoji";
 
 // const MotionImage = motion(Image);
 type ClientsType = {
@@ -91,10 +92,9 @@ const BannerHome = () => {
             <div className="containerTypeOne flex flex-col-reverse md:flex-row justify-between items-end">
                 {/* ....................Left Section............................... */}
                 <div className="w-[100%] md:w-[60%] relative flex flex-col self-center">
-                    <div className="w-full relative h-[150px] xl:h-[200px]">
-                        <AnimatePresence mode="wait">
+                    <AnimatePresence mode="wait">
+                        <motion.div key={index} className="w-full relative h-[150px] xl:h-[200px]">
                             <motion.h1
-                                key={index}
                                 className="absolute text-center md:text-start"
                                 initial={{ y: 30, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -104,7 +104,6 @@ const BannerHome = () => {
                                 {renderTitle(banners[index].heading)}
                             </motion.h1>
                             <motion.p
-                                key={index}
                                 className="absolute w-full text-center md:text-start"
                                 initial={{ y: "var(--motion-y)", opacity: 0 }}
                                 animate={{ y: "calc(var(--motion-y) - 30px)", opacity: 1 }}
@@ -113,8 +112,8 @@ const BannerHome = () => {
                             >
                                 {banners[index].description}
                             </motion.p>
-                        </AnimatePresence>
-                    </div>
+                        </motion.div>
+                    </AnimatePresence>
                     {/* Client Section */}
                     <div className="relative bottom-0 mt-[20px] hidden md:block">
                         <div className="flex justify-center md:justify-start items-center gap-[20px]">
@@ -151,11 +150,12 @@ const BannerHome = () => {
                     </div>
                     <div className="relative bottom-0 mt-[10px] md:mt-[40px] flex justify-center md:justify-start gap-[20px]">
                         {/* <Link href="/contact"> */}
-                        <button className="px-[20px] py-[5px] xs:px-[30px] xs:py-[10px] 3xl:px-[40px] 3xl:py-[20px] bg-white rounded-[6px] hover:bg-gray-100 transition-colors flex items-center gap-2">
+                        {/* <button className="px-[20px] py-[5px] xs:px-[30px] xs:py-[10px] 3xl:px-[40px] 3xl:py-[20px] bg-white rounded-[6px] hover:bg-gray-100 transition-colors flex items-center gap-2">
                             <span className="font-semibold text-black text-[14px] 3xl:text-[30px]">Let&apos;s Talk </span>
                             <span className="hand text-[18px]">👋</span>
-                        </button>
+                        </button> */}
                         {/* </Link> */}
+                        <ButtonEmoji label="Lets's Talk" icon='/assets/emoji-wavinghand.png' />
                         <a href="#getInTouch">
                             <button className=" px-[20px] py-[5px] xs:px-[30px] xs:py-[10px] 3xl:px-[40px] 3xl:py-[20px] text-[14px] 3xl:text-[30px] text-white rounded-[6px] border border-[#FFFFFF] font-medium">
                                 Get in Touch
@@ -178,7 +178,7 @@ const BannerHome = () => {
                                 src={banners[index].image}
                                 alt="Banner Image"
                                 fill
-                                objectFit="contain"
+                                style={{ objectFit: "contain" }}
                                 priority
                             />
                         </motion.div>

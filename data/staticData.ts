@@ -4,6 +4,7 @@ import {
   ContactsType,
   LocationsType,
   Testimonial,
+  YearData,
 } from "@/types";
 
 
@@ -509,7 +510,7 @@ export const servicesContent = [
         subTitle: "Custom AI Models",
         description: "Tailored AI solutions for unique needs",
         subIcon: "/assets/dd-ai2.svg",
-        link: "/services/custom-ai-models",
+        link: "/services/ai-model",
       },
       {
         subTitle: "Model Design and Development",
@@ -521,13 +522,13 @@ export const servicesContent = [
         subTitle: "Domain-Specific Model Training",
         description: "Expert AI training for your industry",
         subIcon: "/assets/dd-ai4.svg",
-        link: "/services/aiexpert",
+        link: "/services/domain-specific",
       },
       {
         subTitle: "AI Model Lifecycle Management",
         description: "AI Model Lifecycle Management",
         subIcon: "/assets/dd-ai5.svg",
-        link: "/services/ai-solutions",
+        link: "/services/ai-model",
       },
       {
         subTitle: "Integration with Existing Systems",
@@ -539,7 +540,7 @@ export const servicesContent = [
         subTitle: "AI Strategy Consultation",
         description: "Strategic AI insights for business growth",
         subIcon: "/assets/dd-ai7.svg",
-        link: "/services/aistrategy"
+        link: "/services/ai-strategy"
       },
       {
         subTitle: "Implementation and Optimization",
@@ -1689,4 +1690,41 @@ export const employeeThoughts = [
       emoji: "🎉",
       avatar: '/assets/team-raju.webp',
   },
+];
+
+export const timelineData: YearData[] = [
+  { year: 2017, image: "/assets/industryOne-7.png", content: "Some content...2017" },
+  { year: 2018, image: "/assets/industryOne-8.png", content: "Some content...2018" },
+  { year: 2019, image: "/assets/industryOne-8.png", content: "Some content...2019" },
+  { year: 2020, image: "/assets/industryOne-8.png", content: "Some content...2020" },
+  { year: 2021, image: "/assets/industryOne-8.png", content: "Some content...2021" },
+  { year: 2022, image: "/assets/industryOne-8.png", content: "Some content...2022" },
+  { year: 2023, image: "/assets/industryOne-8.png", content: "Some content...2023" },
+  { year: 2024, image: "/assets/industryOne-8.png", content: "Some content...2024" },
+  { year: 2025, image: "/assets/industryOne-8.png", content: "Some content...2025" },
+];
+
+// .......................................Services - Domain Specific model training................................
+
+export const fourpointerData = [
+  { header: "Custom Dataset Training", 
+    para: "We use your unique data to train AI models that truly understand your business needs.",
+     imgSrc: '/assets/domainspecific-1.png', 
+     position: "left" 
+    },
+  { header: "Industry-Focused Algorithms", 
+    para: "Our models are built to tackle challenges specific to your domain, ensuring maximum impact.",
+     imgSrc: '/assets/domainspecific-2.png',
+      position: "left"
+     },
+  { header: "Real-World Application", 
+    para: "From healthcare to finance, our solutions deliver actionable insights and measurable outcomes.",
+     imgSrc: '/assets/domainspecific-3.png',
+      position: "right"
+     },
+  { header: "Continuous Learning",
+     para: "With our models, the learning never stops. They adapt to new data, keeping your business ahead.",
+      imgSrc: '/assets/domainspecific-4.png', 
+      position: "right"
+     },
 ];

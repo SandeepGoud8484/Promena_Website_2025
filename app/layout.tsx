@@ -20,21 +20,21 @@ const gtwalsheim = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | My Website',
-    default: 'My Website - Modern Web Solutions',
+    template: '%s | Promena',
+    default: 'AI Solutions & Software Development Services',
   },
-  description: 'A modern website built with Next.js focusing on performance and SEO',
+  description: "Explore Promena's cutting-edge AI and software development services. Empower your business with innovation, data science, and advanced technology.",
   openGraph: {
-    title: 'My Website',
-    description: 'A modern website built with Next.js focusing on performance and SEO',
-    url: 'https://your-domain.com',
-    siteName: 'My Website',
+    title: "AI Solutions & Software Development Services",
+    description: "Explore Promena's cutting-edge AI and software development services. Empower your business with innovation, data science, and advanced technology.",
+    url: 'https://promena-website-2025.vercel.app/',
+    siteName: 'Promena',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d',
+        url: 'https://development1.promena.in/_next/static/media/PROMENA%20LOGO%20WHITE.b1b7394b.png',
         width: 1200,
         height: 630,
-        alt: 'My Website',
+        alt: 'Promena',
       },
     ],
     locale: 'en_US',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'My Website',
-    description: 'A modern website built with Next.js focusing on performance and SEO',
-    images: ['https://images.unsplash.com/photo-1522542550221-31fd19575a2d'],
+    title: "'AI Solutions & Software Development Services'",
+    description: "Explore Promena's cutting-edge AI and software development services. Empower your business with innovation, data science, and advanced technology.",
+    images: ['https://development1.promena.in/_next/static/media/PROMENA%20LOGO%20WHITE.b1b7394b.png'],
   },
   robots: {
     index: true,
@@ -66,6 +66,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/assets/favicon.png" />
+      </head>
       <body className={`${gtwalsheim.variable}`}>{children}</body>
     </html>
   );

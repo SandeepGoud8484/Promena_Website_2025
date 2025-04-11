@@ -1,0 +1,15 @@
+.sectionFourAiModel{
+    background: url('/assets/aimodel-bg1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.partnerWithUs{
+    background: radial-gradient(
+        71.57% 158.64% at 126.21% -48.72%,
+        #6F00FF 0%,
+        #09090F 100%
+      );
+      gap: 50px;
+      border-radius: 16px;
+}
