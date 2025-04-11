@@ -1,0 +1,31 @@
+.domainSecOneBg {
+  background: linear-gradient(244.2deg, #09090f 0%, #09090f 66.3%);
+}
+.domainSecTwoBg {
+  background: url("/assets/aimodel-bg1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.numberingBg {
+  background: url("/assets/domainspecific-num1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+}
+
+.bgFixed {
+  position: relative;
+  background: url("/assets/domainspecific-bg1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bgFixed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(2, 27, 54, 0.7);
+}

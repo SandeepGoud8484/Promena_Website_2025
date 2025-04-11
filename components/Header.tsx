@@ -11,6 +11,7 @@ import { useContactUs } from "@/hooks/ContactUsContext";
 import { ArrowdownNavIcon, RightArrowIcon } from "@/public/icons";
 import { useSelectedNav } from "@/hooks/useSelectedNav";
 import { motion } from "framer-motion";
+import ButtonEmoji from "./reusable/ButtonEmoji";
 
 
 const mobileNavItems = [
@@ -71,7 +72,7 @@ export default function Header() {
 
     const handleMouseLeave = () => {
         const timeout = setTimeout(() => {
-            setActiveDropdown(null) 
+            setActiveDropdown(null)
             setActiveIndex(0);
         }, 300);
         setHoverTimeout(timeout);
@@ -128,7 +129,7 @@ export default function Header() {
             >
                 <div className="containerTypeOne flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold flex items-center">
-                        <Image src={logo} alt="Logo" width={166} height={29} priority/>
+                        <Image src={logo} alt="Logo" width={166} height={29} priority />
                     </Link>
 
                     <button
@@ -187,16 +188,7 @@ export default function Header() {
                     </nav>
 
                     <div className="hidden lg:block">
-                        <button
-                            className="bannerHandwave px-[10px] xl:px-[20px] py-[5px] bg-white rounded-[6px] hover:bg-gray-100 transition-colors flex items-center gap-2
-              "
-                        //   onClick={toggleContactUs}
-                        >
-                            <span className=" font-semibold text-black text-[14px] 3xl:text-lg-4k 4k:text-2xl-4k">
-                                Let&apos;s Talk{" "}
-                            </span>
-                            <span className="hand text-[18px]">👋</span>
-                        </button>
+                        <ButtonEmoji label="Lets's Talk" icon='/assets/emoji-wavinghand.png' />
                     </div>
                 </div>
 
@@ -211,9 +203,9 @@ export default function Header() {
                 >
                     {/* <div className="p-2 overflow-hidden"> */}
                     {mobileNavItems.map(
-                        (item) =>
+                        (item, index) =>
                             activeDropdown === item.title && (
-                                <div className="relative flex gap-[15px] px-[20px] py-[15px] h-[70vh] ">
+                                <div key={index} className="relative flex gap-[15px] px-[20px] py-[15px] h-[70vh] ">
                                     {/* Left Side Titles */}
                                     {item?.content && item?.content[0].title && (
                                         <div className="bg-[#F7F8F9] px-[20px] py-[15px] flex flex-col rounded-[15px] h-[70vh] text-start">
@@ -226,7 +218,7 @@ export default function Header() {
                                                         }`}
                                                     onMouseEnter={() => setActiveIndex(index)}
                                                 >
-                    
+
                                                     <div className="flex gap-[10px] items-center">
                                                         <div
                                                             className={`w-[45px] h-[45px] rounded-[5px] flex items-center justify-center transition-colors duration-300 ${activeIndex === index
@@ -237,8 +229,9 @@ export default function Header() {
                                                             <Image
                                                                 src={item?.icon}
                                                                 alt="icon"
-                                                                width="30"
-                                                                height="20"
+                                                                width={30}
+                                                                height={30}
+                                                                style={{ height: "auto" }}
                                                             />
                                                         </div>
                                                         <h1 className="w-[200px] font-semibold text-[14px] leading-[21px] text-[#3D3D3D]">
@@ -290,8 +283,9 @@ export default function Header() {
                                                                                 <Image
                                                                                     src={subItem?.subIcon}
                                                                                     alt="icon"
-                                                                                    width="30"
-                                                                                    height="20"
+                                                                                    width={30}
+                                                                                    height={30}
+                                                                                    style={{ height: "auto" }}
                                                                                 />
                                                                             </div>
                                                                             <div className="flex flex-col text-center">
@@ -382,7 +376,7 @@ export default function Header() {
                                     </div>
                                     {activeAccordionIndex === index && item.content && (
                                         <ul className="mt-2 list-disc text-sm list-none ">
-                                            {item.content?.map(({ title, subContent}, subIndex) => (
+                                            {item.content?.map(({ title, subContent }, subIndex) => (
                                                 <li key={subIndex} className="mb-3  p-2 rounded-md transition-all ">
                                                     {/* <span className="font-medium ">{title}</span>{" "} */}
                                                     {/* {subItem.description} */}
@@ -404,13 +398,13 @@ export default function Header() {
                                                             </div>
                                                             {/* {
                                                                 activeSubAccordionIndex === subIndex && subContent && */}
-                                                                <ul className="mt-2 list-disc  list-none ">
-                                                                    {
-                                                                        subContent?.map((subPage, subPageIndex) => (
-                                                                            <Link href={subPage.link || "#"} key={subPageIndex}><li className="sublinks text-[12px] mt-[20px]">{subPage.subTitle}</li></Link>
-                                                                        ))
-                                                                    }
-                                                                </ul>
+                                                            <ul className="mt-2 list-disc  list-none ">
+                                                                {
+                                                                    subContent?.map((subPage, subPageIndex) => (
+                                                                        <Link href={subPage.link || "#"} key={subPageIndex}><li className="sublinks text-[12px] mt-[20px]">{subPage.subTitle}</li></Link>
+                                                                    ))
+                                                                }
+                                                            </ul>
                                                             {/* } */}
                                                         </div>
                                                     }
@@ -432,16 +426,7 @@ export default function Header() {
 
                         {/* Footer Button */}
                         <div className="py-4 flex justify-center">
-                            {/* <Link href="/contact"> */}
-                            <button className="px-[10px] xl:px-[20px] py-[5px] bg-white rounded-[6px] hover:bg-gray-100 transition-colors flex items-center gap-2"
-                            //   onClick={toggleContactUs}
-                            >
-                                <span className="font-semibold text-black text-[14px]">
-                                    Let&apos;s Talk
-                                </span>
-                                <span className="hand text-[18px]">👋</span>
-                            </button>
-                            {/* </Link> */}
+                            <ButtonEmoji label="Lets's Talk" icon='/assets/emoji-wavinghand.png' />
                         </div>
                     </div>
                 </div>

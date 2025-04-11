@@ -1,0 +1,12 @@
+.sectionFourBg{
+    background: url('/assets/aistrategy-bg1.webp');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center left;
+}
+.sectionFiveBg{
+    background: url('/assets/aistrategy-bg2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

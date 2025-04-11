@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './AboutUsSectionTwo.module.css'
 import SectionLabel from '@/components/reusable/SectionLabel'
 import Image from 'next/image'
 import Cards from '../Cards'

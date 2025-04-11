@@ -5,11 +5,9 @@ import SectionLabel from '@/components/reusable/SectionLabel'
 import { industryCardOneData, industryCardTwoData } from '@/data/staticData'
 import Image from 'next/image'
 const IndustryCardOne = dynamic(() => import("@/components/reusable/industryCardOne/IndustryCardOne"), {
-    ssr: false,
     loading: () => <p>Loading...</p>,
 });
 const ButtonEmoji = dynamic(() => import("@/components/reusable/ButtonEmoji"), {
-    ssr: false,
     loading: () => <p>Loading...</p>,
 });
 
