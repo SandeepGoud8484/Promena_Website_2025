@@ -1,15 +1,33 @@
-.sectionFourAiModel{
-    background: url('/assets/aimodel-bg1.webp');
+.aiModelLifeCycleBanner {
+    background: url("/assets/about-bgImg.webp");
+    background-size: contain;
+    background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
-.partnerWithUs{
-    background: radial-gradient(
-        71.57% 158.64% at 126.21% -48.72%,
-        #6F00FF 0%,
-        #09090F 100%
-      );
-      gap: 50px;
-      border-radius: 16px;
+.titleScroller {
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2.5rem, 10vw, 150px); /* Responsive */
+  line-height: 145px;
+}
+.sectionHeading {
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 60px);
+  line-height: clamp(40px, 7vw, 70px);
+  text-align: center;
+}
+.sectionFourAiModel {
+  background: url("/assets/aimodel-bg1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.partnerWithUs {
+  background: radial-gradient(
+    71.57% 158.64% at 126.21% -48.72%,
+    #6f00ff 0%,
+    #09090f 100%
+  );
+  gap: 50px;
+  border-radius: 16px;
 }

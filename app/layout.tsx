@@ -1,6 +1,10 @@
+import { SmoothScrollerProvider } from '@/hooks/useLenis';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Header from '@/components/Header';
+import OfficeLocations from '@/components/OfficeLocations';
+import Footer from '@/components/Footer';
 
 const gtwalsheim = localFont({
   src: [
@@ -67,9 +71,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/assets/favicon.png" />
+        <link rel="icon" href="/assets/favicon.png" />
       </head>
-      <body className={`${gtwalsheim.variable}`}>{children}</body>
+      <body className={`${gtwalsheim.variable} bg-custom-radial`}>
+        <Header />
+        <SmoothScrollerProvider>
+          {children}
+        </SmoothScrollerProvider>
+        <OfficeLocations />
+        <Footer />
+      </body>
     </html>
   );
 }

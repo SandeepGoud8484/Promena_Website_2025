@@ -6,7 +6,7 @@ import ServiceCard from '@/components/reusable/serviceCard/ServiceCard'
 
 const SectionOne = () => {
   return (
-    <section className={``}>
+    <section className={`bg-[white]`}>
         <div className='containerTypeOne py-[100px] flex flex-col items-center'>
             <div className='mb-[60px]'>
                 <div className='mb-[25px]'>

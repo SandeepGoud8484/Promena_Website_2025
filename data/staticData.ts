@@ -5,6 +5,7 @@ import {
   LocationsType,
   Testimonial,
   YearData,
+  ItemsMapType,
 } from "@/types";
 
 
@@ -197,7 +198,7 @@ export const achievementData = [
       { src: "/assets/tech-figma.png", name: "Figma" },
       { src: "/assets/tech-adobeillustrator.png", name: "Adobe illustrator" },
       { src: "/assets/tech-adobephotoshop.png", name: "Adobe photoshop" },
-      { src: "/assets/tech-canva.png", name: "Canva" },
+      // { src: "/assets/tech-canva.png", name: "Canva" },
     ],
   },
 ];
@@ -522,7 +523,7 @@ export const servicesContent = [
         subTitle: "Domain-Specific Model Training",
         description: "Expert AI training for your industry",
         subIcon: "/assets/dd-ai4.svg",
-        link: "/services/domain-specific",
+        link: "/services/ai-domain-specific",
       },
       {
         subTitle: "AI Model Lifecycle Management",
@@ -1083,7 +1084,7 @@ export const aiSolutions = [
         link: "/working",
       },
       {
-        subTitle: "3D Computer Vision & AI for Metaverse ",
+        subTitle: "3D Computer Vision & AI for Metaverse",
         description: "Reconstructs 3D scenes, and Powers AR/VR applications",
         subIcon: "/assets/dd-meche5.svg",
         link: "/working",
@@ -1217,6 +1218,25 @@ export const aiSolutions = [
     ],
   },
 ];
+
+export const itemsMap: ItemsMapType = {
+    "services": {
+        ai: [{ name:"Custom AI Models", link:""}, { name:"Model Design and Development", link:""}, { name:"Domain-Specific Model Training", link:"/services/ai-domain-specific"}, { name:"AI Model Lifecycle Management", link:"/services/ai-model"}, { name:"Integration with Existing Systems", link:""}, { name:"AI Strategy Consultation", link:"/services/ai-strategy"}, { name:"Implementation and Optimization", link:""}],
+        ml: [{ name:"Feature Engineering", link:""}, { name:"Model Development and Training", link:""}, { name:"Image and Speech Recognition", link:""}, { name:"Object Detection", link:""}, { name:"Facial Recognition", link:""}, { name:"Chatbot and Virtual Assistant Development", link:""}, { name:"Text Summarization", link:""}],
+        de: [{ name:"Big Data Solutions", link:""}, { name:"Data Pipeline Management", link:""}, { name:"Data Visualization and Reporting", link:""}, { name:"Cloud-Based Big Data Solutions", link:""}, { name:"Data Ingestion Frameworks", link:""}, { name:"Data Transformation and Cleaning", link:""}, { name:"Automated Report Generation", link:""}, { name:"Real-Time Data Visualization", link:""}, { name:"Data Storytelling", link:""}],
+        app: [{ name:"Web and Mobile App Development", link:""}, { name:"API Development & Integration", link:""}, { name:"Backend & Frontend Solutions", link:""}, { name:"Cross-Platform App Development", link:""}, { name:"RESTful API Development", link:""}, { name:"Third-Party API Integration", link:""}, { name:"Microservices Architecture", link:""}],
+        ui: [{ name:"User Research and Analysis", link:""}, { name:"Wireframing and Prototyping", link:""}, { name:"Visual Design and Branding", link:""}, { name:"Interaction Design", link:""}, { name:"Interactive UI Elements", link:""}],
+        aug: [{ name:"Remote and On-site Development Teams", link:""}, { name:"Remote Agile Teams", link:""}, { name:"Full-Stack Development Teams", link:""}, { name:"Project-Based and Full-Time Contracts", link:""}],
+    },
+    "ai-solutions": {
+        nlp: [{ name:"Personalized AI Chatbots", link:""}, { name:"Self-Improving AI", link:""}, { name:"Virtual Assistant Development", link:""}, { name:"AI for Education & Automated Tutoring", link:""}, { name:"Topic Modeling", link:""}],
+        cv: [{ name:"AI for Autonomous Vehicles", link:""}, { name:"Pose Estimation & Human Activity Recognition", link:""}, { name:"3D Computer Vision & AI for Metaverse", link:""}, { name:"Retail AI & Smart Checkout", link:""}, { name:"AI-Powered Deepfake Detection", link:""}],
+    },
+    "augment-your-team": {
+        be: [{ name:"AI Engineer", link:""}, { name:"Python", link:""}, { name:".NET", link:""}, { name:"Node.js", link:""}],
+        fe: [{ name:"Angular", link:""}, { name:"React.js", link:""}, { name:"Next.js", link:""}],
+    },
+};
 
 // .....................................Top Projects.....................................................
 

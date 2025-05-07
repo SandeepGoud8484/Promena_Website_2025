@@ -97,7 +97,7 @@ const HomeSectionTwo = () => {
     );
 
     return (
-        <section className='bg-[#09090F] flex flex-col'>
+        <section className=' flex flex-col'>
             {/* ...............................OUR INDUSTRIES............................. */}
             <div className='industriesWeServe flex justify-center'>
                 <div className="containerTypeOne flex flex-col items-center py-[100px]">
@@ -185,6 +185,9 @@ const HomeSectionTwo = () => {
                     </div>
                 </div>
             </div>
+
+            <hr className="w-full max-w-[788px] border-t-1 border-[#F5F5F51A] mx-auto" />
+
 
         </section>
     )

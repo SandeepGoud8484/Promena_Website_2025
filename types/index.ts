@@ -68,3 +68,17 @@ export interface InterfaceFPC {
     imgSrc: string;
   }[];
 }
+
+type DropdownItem = { name: string; link: string };
+export type ItemsMapType = Record<string, Record<string, DropdownItem[]>>;
+
+export interface BannerData {
+  bannerData: {
+    mainHeading: string;
+    subHeading: string;
+    mainDescription: string;
+    imagePath: string;
+    subDescription: string;
+    scrollTitle: string;
+  };
+}

@@ -1,21 +1,36 @@
+"use client"; // <--- important for Next.js App Router hooks
+
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-export const useSelectedNav = (key: string, initialValue: string) => {
-  const [value, setValue] = useState<string>(() => {
-    // Check if sessionStorage is available
+type PathToTitleMap = {
+  [path: string]: string;
+};
+
+export const useSelectedNav = (
+  key: string,
+  defaultValue: string,
+  pathToTitleMap: PathToTitleMap
+) => {
+  const pathname = usePathname();
+  console.log("pth",pathname);
+  const getTitleFromPath = (path: string) => pathToTitleMap[path] || defaultValue;
+
+  const [value, setValue] = useState(() => {
     if (typeof window !== "undefined") {
-      const storedValue = sessionStorage.getItem(key);
-      return storedValue !== null ? JSON.parse(storedValue) : initialValue;
+      const stored = sessionStorage.getItem(key);
+      return stored ? JSON.parse(stored) : getTitleFromPath(pathname);
     }
-    return initialValue; // Fallback for SSR
+    return getTitleFromPath(pathname);
   });
 
   useEffect(() => {
-    // Ensure sessionStorage is only accessed in the browser
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem(key, JSON.stringify(value));
+    const title = getTitleFromPath(pathname);
+    if (value !== title) {
+      setValue(title);
+      sessionStorage.setItem(key, JSON.stringify(title));
     }
-  }, [key, value]);
+  }, [pathname]);
 
   return [value, setValue] as const;
 };

@@ -31,13 +31,13 @@ const ExpertTeam = () => {
     }, [itemsPerSlide]); // Recalculate when `itemsPerSlide` changes
 
     return (
-        <div className="w-full flex justify-center bg-white">
+        <div className="w-full flex justify-center">
             <div className='containerTypeOne flex flex-col items-center py-[100px]'>
                 <div className='flex flex-col items-center'>
                     <div className='mb-[25px]'><SectionLabel label="Our Expert Team" /></div>
-                    <div className='sectionHeading mb-[50px] text-[#101118] text-center'>Team Perfection At It’s Finest</div>
+                    <div className='sectionHeading text-[#FFFFFF] text-center'>Team Perfection At It’s Finest</div>
                 </div>
-                <div className="relative w-full overflow-hidden">
+                <div className="relative w-full overflow-hidden py-[50px]">
                     <motion.div
                         className="flex"
                         animate={{ x: `-${currentIndex * 100}%` }}
@@ -47,24 +47,37 @@ const ExpertTeam = () => {
                             <div key={sectionIndex} className="teamCardsContainer flex min-w-full justify-center px-5">
                                 {teamImages.slice(sectionIndex * itemsPerSlide, sectionIndex * itemsPerSlide + itemsPerSlide).map((dev) => (
                                     <motion.div
-                                        key={dev.id}
-                                        className={`eachTeamCard flex w-[clamp(150px,18vw,280px)] flex-col items-center bg-[#FFFFFF] p-5 rounded-[20px] relative ${dev.id % 2 === 0 ? "mt-[40px] lg:mt-[60px]" : "mb-[40px] lg:mb-[60px]"}`}
-                                        whileHover={{ scale: 1.05 }}
-                                    >
-                                        <div className="relative rounded-full p-[2px] lg:p-[4px] bg-gradient-to-b from-[rgba(26,113,255,0.05)] to-[#1A71FF]">
-                                            <div className="relative flex h-[clamp(90px,14vw,210px)] w-[clamp(90px,14vw,210px)] items-center justify-center rounded-full bg-white">
-                                                <Image
-                                                    src={dev.src}
-                                                    alt={dev.name}
-                                                    width={155}
-                                                    height={155}
-                                                    className="rounded-full object-cover w-[clamp(70px,10vw,155px)] h-[clamp(70px,10vw,155px)]"
-                                                />
-                                            </div>
+                                    key={dev.id}
+                                    className={`eachTeamCard flex w-[clamp(150px,18vw,280px)] flex-col items-center bg-[#1B2231] p-5 xl:py-[35px] rounded-[20px] relative ${
+                                        dev.id % 2 === 0 ? "mt-[40px] lg:mt-[60px]" : "mb-[40px] lg:mb-[60px]"
+                                    }`}
+                                    whileHover={{ scale: 1.05 }}
+                                >
+                                    {/* Gradient Border Ring */}
+                                    <div className="relative rounded-full p-[2px] lg:p-[4px] bg-gradient-to-b from-[rgba(26,113,255,0.05)] to-[#1A71FF]">
+                                        {/* Opaque Inner Circle */}
+                                        <div className="relative flex h-[clamp(90px,14vw,170px)] w-[clamp(90px,14vw,170px)] items-center justify-center rounded-full bg-[#1B2231]">
+                                            <Image
+                                                src={dev.src}
+                                                alt={dev.name}
+                                                width={155}
+                                                height={155}
+                                                className="rounded-full object-cover w-[clamp(70px,10vw,155px)] h-[clamp(70px,10vw,155px)] border-[5px] lg:border-[7px] border-white/30"
+                                            />
                                         </div>
-                                        <div className="mt-4 text-[#101118] text-[clamp(16px,1.5vw,22px)] font-bold">{dev.name}</div>
-                                        <p className="text-[clamp(12px,1.2vw,18px)] text-[#1A71FF] leading-[18px] text-center">{dev.role}</p>
-                                    </motion.div>
+                                    </div>
+                                
+                                    {/* Name */}
+                                    <div className="mt-4 text-white text-[clamp(16px,1.5vw,22px)] font-semibold text-center">
+                                        {dev.name}
+                                    </div>
+                                
+                                    {/* Role */}
+                                    <p className="text-[clamp(12px,1.2vw,18px)] text-[#A0AEC0] leading-[18px] text-center">
+                                        {dev.role}
+                                    </p>
+                                </motion.div>
+                                
                                 ))}
                             </div>
                         ))}

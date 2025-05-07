@@ -1,0 +1,30 @@
+.navLinksDisplay {
+  border-top: 0.5px solid;
+  border-bottom: 0.5px solid;
+  border-image-source: linear-gradient(
+    100.98deg,
+    rgba(255, 255, 255, 0.5) 11.6%,
+    rgba(153, 153, 153, 0.5) 89.29%
+  );
+  border-image-slice: 1;
+}
+
+.bottomBorderGradient {
+    position: relative;
+  }
+  
+  .bottomBorderGradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px; /* or your desired border thickness */
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 122, 255, 0) 0%, #007AFF 100%);
+  }
+
+  @media( max-width: 1023px ){
+    .navLinksDisplay {
+        display: none;
+    }
+  }

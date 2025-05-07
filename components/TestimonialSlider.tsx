@@ -64,13 +64,13 @@ export const TestimonialSlider: React.FC = () => {
 
 
     return (
-        <section className='flex justify-center bg-[#f7f7fa] rounded-[2rem]'>
+        <section className='flex justify-center  rounded-[2rem]'>
             <div className="containerTypeOne relative py-[100px]">
                 <div className='flex justify-center flex-col items-center'>
                     <div className='mb-[25px] '>
                         <SectionLabel label='Testimonials' />
                     </div>
-                    <div className='sectionHeading md:w-[600px] text-[#101118] text-center mb-8'>
+                    <div className='sectionHeading md:w-[700px] text-[#FFFFFF] text-center mb-8'>
                         First-Hand Opinions Of Clients On Their Partnership Experience
                     </div>
                 </div>

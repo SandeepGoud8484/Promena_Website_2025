@@ -6,12 +6,14 @@ import React, { useEffect, useState } from "react";
 import logo from "../public/assets/loc-promenaLogoWhite.png";
 // import ContactUs from "@/components/ContactUs/ContactUs";
 
-import { servicesContent, aiSolutions, augmentContent } from "@/data/staticData";
+import { servicesContent, aiSolutions, augmentContent, itemsMap } from "@/data/staticData";
 import { useContactUs } from "@/hooks/ContactUsContext";
 import { ArrowdownNavIcon, RightArrowIcon } from "@/public/icons";
 import { useSelectedNav } from "@/hooks/useSelectedNav";
 import { motion } from "framer-motion";
 import ButtonEmoji from "./reusable/ButtonEmoji";
+import styles from './Headers.module.css';
+import useNavigationContext from "@/hooks/useNavigationContext";
 
 
 const mobileNavItems = [
@@ -44,25 +46,37 @@ const mobileNavItems = [
         content: augmentContent,
     },
 ];
+const pathToTitleMap = {
+    "/": "Home",
+    "/services": "Services",
+    "/about": "About Us",
+    "/industries": "AI Solutions",
+    "/augment-your-team": "Augment Your Team",
+    // Add all your actual route-to-title matches here
+};
+
+const showFlexTitles = ["services", "ai-solutions", "augment-your-team"];
+
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     // const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-    const [selectedNav, setSelectedNav] = useSelectedNav("selectedNav", "Home");
+    const [selectedNav, setSelectedNav] = useSelectedNav("selectedNav", "Home", pathToTitleMap);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
     const [hoverTimeout, setHoverTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
 
-
-
+    console.log("ST", selectedNav)
 
     const [activeAccordionIndex, setActiveAccordionIndex] = useState<number | null>(null);
     const [activeSubAccordionIndex, setActiveSubAccordionIndex] = useState<number | null>(null);
 
     const [isScrolled, setIsScrolled] = useState(false);
     //   const { toggleContactUs } = useContactUs();
+    const { pathname, primary, secondary, isDropdownActive } = useNavigationContext();
 
-
+    const shouldShowBanner = showFlexTitles.includes(primary);
+    const dropdownItems = itemsMap[primary]?.[secondary] || [];
     const handleMouseEnter = (value: string | null) => {
         if (hoverTimeout) {
             clearTimeout(hoverTimeout);
@@ -170,8 +184,9 @@ export default function Header() {
                             >
                                 {/* <span className="px-4 py-2 cursor-pointer">{item.title}</span> */}
                                 <Link
+                                    onClick={() => setSelectedNav(item.title)}
                                     href={item.path}
-                                    className={`block lg:inline-block py-2 lg:py-0  flex items-center xl:text-[16px] lg:text-[14px] 3xl:text-lg-4k 4xl:text-xl-4k 4k:text-2xl-4k font-medium leading-[24px] hover:text-white transition-colors duration-200 ${activeDropdown === item.title ? "text-white" : "text-[#ADADAD]"
+                                    className={`block lg:inline-block py-2 lg:py-0  flex items-center xl:text-[16px] lg:text-[14px] 3xl:text-lg-4k 4xl:text-xl-4k 4k:text-2xl-4k font-medium leading-[24px] hover:text-white transition-colors duration-200 ${(selectedNav === item.title) || (activeDropdown === item.title) ? "text-white" : "text-[#ADADAD]"
                                         }`}
                                 >
                                     {item.title}
@@ -179,9 +194,9 @@ export default function Header() {
                                 {item?.id >= 3 && <div className="transform group-hover:rotate-180 transition-transform duration-300 ">
                                     <ArrowdownNavIcon />
                                 </div>}
-                                {/* {item.content !== undefined && isOpen && (
-                                    <div className="absolute  left-1/2 transform -translate-x-1/2 translate-y-[20px]  w-[15px] h-[15px] bg-white rotate-45"></div>
-                                )} */}
+                                {item.content !== undefined && (activeDropdown === item.title) && (
+                                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="absolute  left-1/2 transform -translate-x-1/2 translate-y-[35px]  w-[15px] h-[15px] bg-white rotate-45"></motion.div>
+                                )}
                             </div>
                         ))}
 
@@ -260,7 +275,7 @@ export default function Header() {
                                             {item?.content[0].title && (
                                                 <hr className=" mt-[15px] mb-[25px] w-full border-t-[5px] rounded-[10px] border-[#FFFFFF]" />
                                             )}
-                                            <div className="relative pb-[25px] grid grid-cols-2 gap-x-[50px] gap-y-[35px] overflow-y-auto h-[78%]">
+                                            <div data-lenis-prevent className="relative pb-[25px] grid grid-cols-2 gap-x-[50px] gap-y-[35px] overflow-y-auto h-[78%]">
                                                 {item?.content[activeIndex]?.subContent
                                                     ? item?.content[activeIndex]?.subContent?.map(
                                                         (subItem, subIndex) => (
@@ -269,6 +284,7 @@ export default function Header() {
                                                                 className="flex items-center gap-x-[15px]"
                                                             >
                                                                 <Link
+                                                                    onClick={handleMouseLeave}
                                                                     href={subItem?.link || "#"}
                                                                     className={`block lg:inline-block py-2 lg:py-0 xl:text-[16px] lg:text-[14px] 3xl:text-lg-4k 4xl:text-xl-4k 4k:text-2xl-4k font-medium leading-[24px] hover:text-white transition-colors duration-200 ${activeDropdown === item.title
                                                                         ? "text-white"
@@ -334,6 +350,23 @@ export default function Header() {
                 </motion.div>
             </header>
 
+
+            {
+                shouldShowBanner && dropdownItems.length > 0 &&
+                <div className={`${styles.navLinksDisplay} w-full bg-white/20 flex justify-center fixed z-20 top-[80px]`}>
+                    <div className={`containerTypeOne `}>
+                        <ul className="flex justify-between gap-[20px] text-[#FFFFFF] text-[12px] font-thin">
+                            {
+                                dropdownItems.map((item, index)=>{
+                                    return <Link href={item.link} key={index} className={`${ pathname === item.link ? styles.bottomBorderGradient : ""} text-center pt-[10px] pb-[5px] cursor-pointer`}>{item.name}</Link>
+                                })
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+
+
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="fixed top-0 inset-0 bg-[#020817] z-50 flex flex-col  items-center ">
@@ -350,7 +383,7 @@ export default function Header() {
                         </button>
                     </div>
 
-                    <div className="w-[100%] px-[5%] max-h-screen  text-white flex flex-col overflow-y-auto">
+                    <div data-lenis-prevent className="w-[100%] px-[5%] max-h-screen  text-white flex flex-col overflow-y-auto">
                         {/* Accordion or Navigation Items */}
                         <div className="flex-1">
                             {mobileNavItems.map((item, index) => (

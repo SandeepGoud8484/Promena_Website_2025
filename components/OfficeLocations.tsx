@@ -13,7 +13,7 @@ export default function OfficeLocations() {
         }
     };
     return (
-        <section className="officeLocations bg-[#09090F]">
+        <section className=" ">
             <div className="containerTypeOne  flex flex-col gap-[50px] items-center w-full py-[50px]">
                 <div className="logoInLocation flex flex-col items-center cursor-pointer">
                     <Image

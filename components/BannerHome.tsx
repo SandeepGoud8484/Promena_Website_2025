@@ -88,7 +88,7 @@ const BannerHome = () => {
 
 
     return (
-        <section className='bg-custom-radial h-screen pb-[20px] md:pb-[50px] items-end overflow-hidden bannerHomepage'>
+        <section className=' h-screen pb-[20px] md:pb-[50px] items-end overflow-hidden bannerHomepage'>
             <div className="containerTypeOne flex flex-col-reverse md:flex-row justify-between items-end">
                 {/* ....................Left Section............................... */}
                 <div className="w-[100%] md:w-[60%] relative flex flex-col self-center">
@@ -116,8 +116,8 @@ const BannerHome = () => {
                     </AnimatePresence>
                     {/* Client Section */}
                     <div className="relative bottom-0 mt-[20px] hidden md:block">
-                        <div className="flex justify-center md:justify-start items-center gap-[20px]">
-                            <div className="flex -space-x-2">
+                        <div className="flex justify-center md:justify-start items-center gap-[40px]">
+                            <div className="flex gap-[5px]">
                                 <AnimatedTooltip
                                     items={clientsData.map((item, index) => ({
                                         id: index,

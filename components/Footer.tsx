@@ -11,7 +11,7 @@ import React, { useState } from "react";
 //   IconBrandLinkedin,
 //   IconBrandYoutube,
 // } from "@tabler/icons-react";
-import Image from "next/image";
+// import Image from "next/image";
 import { technologies, portfolio, industries, aboutUs } from "@/data/staticData";
 import { FacebookIcon, InstagramIcon, LinkedInIcon, ScrollToTopIcon } from "@/public/icons";
 import { FloatingDock } from "./ui/floating-dock";
@@ -23,7 +23,7 @@ const sections = [
     { title: "About", items: aboutUs },
     { title: "Technologies", items: technologies },
     { title: "Industries", items: industries },
-    { title: "Portfolio", items: portfolio },
+    // { title: "Portfolio", items: portfolio },
 ];
 
 export default function Footer() {
@@ -86,7 +86,7 @@ export default function Footer() {
 
     return (
         <>
-            <div className="bg-[#1D1D25] w-full py-[50px] flex justify-center">
+            <div className=" w-full py-[50px] flex justify-center">
                 <div className="containerTypeOne hidden lg:flex justify-between ">
                     <div className="max-md:w-[42%]">
                         <div className="font-bold text-[26px] text-[#FFFFFF] leading-[30px] mb-[30px]">
@@ -125,8 +125,8 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="max-md:w-[42%]">
-                        {/* <ExpandableList title="Portfolio" items={portfolio} /> */}
+                    {/* <div className="max-md:w-[42%]">
+                        <ExpandableList title="Portfolio" items={portfolio} />
                         <div className="font-bold text-[26px] text-[#FFFFFF] leading-[30px] mb-[30px]">Portfolio</div>
                         <div className="flex gap-[65px]">
                             <ul className="footer-list flex flex-col gap-[10px]">
@@ -144,7 +144,7 @@ export default function Footer() {
                                 ))}
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="containerTypeOne lg:hidden w-full">
@@ -175,7 +175,7 @@ export default function Footer() {
             </div>
 
             {/* .........Copyright Section........... */}
-            <div className="industriesWeServe bg-[#1D1D25] w-full flex justify-center">
+            <div className="industriesWeServe  w-full flex justify-center">
                 <div className="containerTypeOne py-[20px] flex flex-col justify-center">
 
 
