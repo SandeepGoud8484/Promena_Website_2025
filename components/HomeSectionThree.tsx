@@ -9,9 +9,11 @@ const HomeSectionThree = () => {
 
   
   return (
-    <section className='bg-[white] flex-col'>
+    <section className=' flex-col'>
       {/* ...........................OUR EXPERT TEAM........................... */}
       <ExpertTeam />
+
+      <hr className="w-full max-w-[788px] border-t-1 border-[#F5F5F51A] mx-auto" />
 
       {/* ..........................TESTMONIALS SLIDER.......................... */}
       <TestimonialSlider />

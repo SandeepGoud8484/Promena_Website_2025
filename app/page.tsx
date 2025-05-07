@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import Header from '@/components/Header';
 import BannerHome from '@/components/BannerHome';
 const ScrollPartners = dynamic(() => import("@/components/ScrollPartners"), {
   ssr: false,
@@ -8,24 +7,16 @@ const ScrollPartners = dynamic(() => import("@/components/ScrollPartners"), {
 import HomeSectionOne from '@/components/HomeSectionOne';
 import HomeSectionTwo from '@/components/HomeSectionTwo';
 import HomeSectionThree from '@/components/HomeSectionThree';
-const OfficeLocations = dynamic(() => import("@/components/OfficeLocations"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
-import Footer from '@/components/Footer';
 
 
 export default function Home() {
   return (
     <main className="">
-      <Header />
       <BannerHome />
       <ScrollPartners />
       <HomeSectionOne />
       <HomeSectionTwo />
       <HomeSectionThree />
-      <OfficeLocations />
-      <Footer />
       {/* <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">

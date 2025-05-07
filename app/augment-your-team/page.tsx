@@ -1,14 +1,8 @@
 import dynamic from 'next/dynamic';
-import Header from '@/components/Header'
 import BannerAugment from '@/components/augment/banner/BannerAugment';
 const AugmentSectionOne = dynamic(() => import("@/components/augment/sectionOne/AugmentSectionOne"), {
     loading: () => <p>Loading...</p>,
 });
-const OfficeLocations = dynamic(() => import("@/components/OfficeLocations"), {
-    ssr: false,
-    loading: () => <p>Loading...</p>,
-});
-import Footer from '@/components/Footer'
 
 
 export const metadata = {
@@ -25,11 +19,8 @@ export const metadata = {
 const AugmentYourTeamPage = () => {
     return (
         <>
-            <Header />
             <BannerAugment />
             <AugmentSectionOne />
-            <OfficeLocations />
-            <Footer />
         </>
     )
 }

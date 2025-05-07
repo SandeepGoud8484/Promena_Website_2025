@@ -58,18 +58,18 @@ function Cards() {
   // };
 
   return (
-    <div className="bg-black">
-      <div className="max-w-4xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl ">
+    <div className="">
+      <div className="">
         <div className="relative">
           <div
             ref={scrollContainerRef}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-hide scroll-smooth"
+            className="flex  gap-4 sm:gap-6 lg:gap-8"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="w-full sm:w-auto flex-shrink-0 flex justify-center" 
+                className="flex-shrink-0 flex justify-center" 
               >
                 <Card {...card} />
               </div>

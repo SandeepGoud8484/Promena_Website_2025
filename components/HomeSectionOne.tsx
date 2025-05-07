@@ -143,7 +143,7 @@ const technologies = [
 
 const HomeSectionOne = () => {
     return (
-        <section className='bg-[#0E0E15] flex flex-col items-center'>
+        <section className=' flex flex-col items-center'>
             {/* ...........................Success In Numbers.........................  */}
             <div className="w-[100%] flex justify-center">
                 <div className="containerTypeOne py-[100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-[1fr_1fr_1fr] justify-between gap-[50px] 3xl:gap-[80px]">
@@ -237,10 +237,10 @@ const HomeSectionOne = () => {
             <hr className="w-full max-w-[788px] border-t-1 border-[#F5F5F51A] mx-auto" />
 
             {/* ..............................TOP FEATURES SECTION.................................. */}
-            <div className="bg-black w-full flex justify-center">
+            <div className=" w-full flex justify-center">
                 <div className="containerTypeOne py-[100px] flex justify-center min-h-screen text-white">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-[40%_50%] gap-[90px] w-full">
-                        <div className="lg:sticky lg:top-0 lg:h-screen flex items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-[45%_50%] justify-between gap-[50px] w-full">
+                        <div className="lg:sticky lg:top-[30px] lg:h-screen flex items-center">
                             <div className="relative overflow-hidden ">
                                 <div className="">
                                     <div className="mb-6 mt-6 ">
@@ -256,17 +256,17 @@ const HomeSectionOne = () => {
                                         for Business Growth.
                                     </p>
                                     <ul className="space-y-3">
-                                        <li className="contentList bg-[#09090F] text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
+                                        <li className="contentList text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
                                             Driving transformation with advanced technology
                                         </li>
-                                        <li className="contentList bg-[#09090F] text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
+                                        <li className="contentList text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
                                             Seamless solutions that align technology with business
                                             objectives
                                         </li>
-                                        <li className="contentList bg-[#09090F] text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
+                                        <li className="contentList text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
                                             Tailored strategies and systems to meet your unique goals
                                         </li>
-                                        <li className="contentList bg-[#09090F] text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
+                                        <li className="contentList text-[#94979E] px-4 py-2 rounded-full border border-[#606060] inline-block">
                                             Support and expertise to fuel sustained growth and success
                                         </li>
                                     </ul>
@@ -302,6 +302,8 @@ const HomeSectionOne = () => {
                 </div>
             </div>
 
+            <hr className="w-full max-w-[788px] border-t-1 border-[#F5F5F51A] mx-auto" />
+            
             {/* ..............................TOP PROJECTS SECTION.................................. */}
             <HeroParallax products={products}/>
 
